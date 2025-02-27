@@ -1,0 +1,56 @@
+{%- assign emojiFontSize = 450 -%}
+{%- assign emojiPosiitonLeft = 0 -%}
+{%- assign emojiPosiitonTop = -60 -%}
+{%- assign emojiTextHorizontalOffset = -95 -%}
+{%- assign contentSize = '' -%}
+{%- assign 8ballSize = '700' -%}
+{%- assign answer = "Yes, but don't hold your breath" -%}
+
+<style>
+  .layout {
+    z-index: 10;
+  }
+  .content {
+      text-align: center;
+  }
+
+  div.eight-ball {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: {{ 8ballSize }}px;
+    height: {{ 8ballSize }}px;
+    margin: 0 auto;
+  }
+
+  div.answer {
+    border-radius: 50%;
+    width: 50%;
+    height: 50%;
+    margin: 25% auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    letter-spacing: 2px;
+  }
+</style>
+
+<div class="layout layout--center ">
+  <div class="layout layout--col">
+    <div class="content">
+      <div class="eight-ball">
+        <div class="answer bg--gray-2">
+          <span class="value value--{{ contentSize }}" data-value-fit="true"">{{ answer }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+<div class="title_bar">
+  🔮
+  <span class="title">Magic 8-Ball</span>
+</div>
